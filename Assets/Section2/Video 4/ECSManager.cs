@@ -1,37 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Transactions;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
 
-public class ECSManager : MonoBehaviour
+namespace Section2.Video_4
 {
-    [SerializeField] private GameObject sheepPrefab;
-    [SerializeField] private int spawnSheepCount;
-
-    private EntityManager entityManager;
-
-    void Start()
+    public class ECSManager : MonoBehaviour
     {
-        entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-        var settings = GameObjectConversionSettings.FromWorld(World.DefaultGameObjectInjectionWorld, null);
-        var ecsPrefab = GameObjectConversionUtility.ConvertGameObjectHierarchy(sheepPrefab, settings);
+        [SerializeField] private GameObject sheepPrefab;
+        [SerializeField] private int spawnSheepCount;
 
-        for (int i = 0; i < spawnSheepCount; i++)
+        private EntityManager entityManager;
+
+        void Start()
         {
-            var instance = entityManager.Instantiate(ecsPrefab);
-            var position = transform
-                .TransformPoint(
-                    new float3(UnityEngine.Random.Range(-50, 50), 0, UnityEngine.Random.Range(-50, 50)));
-            entityManager.SetComponentData(instance, new Translation { Value = position, });
-            entityManager.SetComponentData(instance, new Rotation { Value = new quaternion(0,0,0,0), });
-        }
-    }
+            entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+            var settings = GameObjectConversionSettings.FromWorld(World.DefaultGameObjectInjectionWorld, null);
+            var ecsPrefab = GameObjectConversionUtility.ConvertGameObjectHierarchy(sheepPrefab, settings);
 
-    // Update is called once per frame
-    void Update()
-    {
+            for (int i = 0; i < spawnSheepCount; i++)
+            {
+                var instance = entityManager.Instantiate(ecsPrefab);
+                var position = transform
+                    .TransformPoint(
+                        new float3(UnityEngine.Random.Range(-50, 50), 0, UnityEngine.Random.Range(-50, 50)));
+                entityManager.SetComponentData(instance, new Translation { Value = position, });
+                entityManager.SetComponentData(instance, new Rotation { Value = new quaternion(0,0,0,0), });
+            }
+        } 
     }
 }

@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.Jobs;
 using Unity.Jobs;
 using Random = UnityEngine.Random;
