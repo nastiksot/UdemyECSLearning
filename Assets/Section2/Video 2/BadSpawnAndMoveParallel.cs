@@ -26,11 +26,10 @@ namespace Section2.Video_2
             foreach (var instantiatedSheep in instantiatedSheeps)
             {
                 instantiatedSheep.transform.Translate(0f, 0f, 0.1f);
-                if (instantiatedSheep.transform.position.z < 50) return;
-
+                if (instantiatedSheep.transform.position.z < 50) continue; 
                 var sheepPosition = instantiatedSheep.transform.position;
                 var newPosition = new Vector3(sheepPosition.x, sheepPosition.y, -50f);
-                
+
                 sheepPosition = newPosition;
                 instantiatedSheep.transform.position = sheepPosition;
             }
