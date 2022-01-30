@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 525815237}
   - component: {fileID: 525815238}
   - component: {fileID: 525815236}
+  - component: {fileID: 525815239}
   m_Layer: 0
   m_Name: Spawn
   m_TagString: Untagged
@@ -327,7 +328,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525815235}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77958b923249f5c41abc743ad4545a7c, type: 3}
   m_Name: 
@@ -362,6 +363,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sheepPrefab: {fileID: 2026991542, guid: ed57f85e128444af2aecca62ff336fea, type: 3}
   spawnSheepCount: 5000
+--- !u!114 &525815239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525815235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb47a8a63f81fc44a1d2ec770b9d063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sheepPrefab: {fileID: 2026991542, guid: ed57f85e128444af2aecca62ff336fea, type: 3}
+  spawnSheepCount: 25000
 --- !u!1 &1536211686
 GameObject:
   m_ObjectHideFlags: 0
