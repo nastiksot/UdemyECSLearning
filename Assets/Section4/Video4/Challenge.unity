@@ -245,8 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ec594eccc24396b5b8054eaa34a572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetPrefab: {fileID: 3047780882129755706, guid: 27f03b375ce1512469c4e450d736cfeb, type: 3}
-  planetCount: 300
+  planetPrefab: {fileID: 3198788842715732406, guid: a7611076a03db46298fd3a47229d8fbb, type: 3}
+  planetCount: 10000
 --- !u!4 &649292046
 Transform:
   m_ObjectHideFlags: 0
@@ -256,7 +256,7 @@ Transform:
   m_GameObject: {fileID: 649292044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
