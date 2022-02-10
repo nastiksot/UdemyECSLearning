@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetPrefab: {fileID: 3047780882129755706, guid: 27f03b375ce1512469c4e450d736cfeb, type: 3}
-  planetCount: 500
+  planetCount: 300
 --- !u!4 &649292046
 Transform:
   m_ObjectHideFlags: 0

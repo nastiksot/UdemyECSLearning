@@ -19,8 +19,7 @@ namespace Section4.Video4
                 var settings = GameObjectConversionSettings.FromWorld(World.DefaultGameObjectInjectionWorld, null);
                 var planetECSprefab = GameObjectConversionUtility.ConvertGameObjectHierarchy(planetPrefab, settings);
                 var instantiatedPlanet = entityManager.Instantiate(planetECSprefab);
-                var randomPosition = new float3(UnityEngine.Random.Range(-100, 100),
-                    UnityEngine.Random.Range(-100, 100),
+                var randomPosition = new float3(UnityEngine.Random.Range(-100, 100), 0,
                     UnityEngine.Random.Range(-100, 100));
                 entityManager.SetComponentData(instantiatedPlanet, new Translation
                 {
