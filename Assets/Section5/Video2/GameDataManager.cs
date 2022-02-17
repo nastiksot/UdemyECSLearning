@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Section5.Video1
+namespace Section5.Video2
 {
     public class GameDataManager : MonoBehaviour
     {

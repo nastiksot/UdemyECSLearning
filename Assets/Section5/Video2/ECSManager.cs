@@ -1,9 +1,10 @@
-﻿using Unity.Entities;
+﻿using Section5.Video1.ECSObjectData;
+using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
 
-namespace Section4.Video1
+namespace Section5.Video2
 {
     public class ECSManager : MonoBehaviour
     {
@@ -38,13 +39,18 @@ namespace Section4.Video1
                 });
 
                 var instantiatedSheep = entityManager.Instantiate(sheepECSPrefab);
+                entityManager.SetComponentData(instantiatedSheep, new Rotation
+                {
+                    Value = quaternion.identity
+                });
                 entityManager.SetComponentData(instantiatedSheep, new Translation
                 {
                     Value = position
                 });
-                entityManager.SetComponentData(instantiatedSheep, new Rotation
+                entityManager.SetComponentData(instantiatedSheep, new SheepData
                 {
-                    Value = quaternion.identity
+                    moveSpeed = UnityEngine.Random.Range(5f, 15f),
+                    rotationSpeed = UnityEngine.Random.Range(2f, 10f)
                 });
             }
         }

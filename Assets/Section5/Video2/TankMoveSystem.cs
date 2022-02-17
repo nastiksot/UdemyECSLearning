@@ -3,7 +3,7 @@ using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-namespace Section4.Video1
+namespace Section5.Video2
 {
     public class TankMoveSystem : JobComponentSystem
     {
